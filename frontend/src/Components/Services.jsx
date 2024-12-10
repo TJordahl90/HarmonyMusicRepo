@@ -14,7 +14,7 @@ const Services = () => {
         const getCourses = async () => {
             try {
                 console.log("got courses");
-                const response = await axios.get('http://138.197.87.6:80/course_list/');
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/course_list/');
                 setCourses(response.data);
             } 
             catch (error) {
