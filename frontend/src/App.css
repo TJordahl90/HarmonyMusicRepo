@@ -1,0 +1,67 @@
+body {
+    background-color: #facf97;
+    background-image: conic-gradient(from 0deg, rgba(255, 255, 255, 0.1), transparent 20%, rgba(0, 0, 0, 0.1) 20%, transparent 30%);
+    background-size: 12px 12px; 
+}
+
+/* Fonts used in the website */
+h1, h2, h3, h4, h5 {
+    color: #BF5700;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+a {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+form, form label, form input, form button, form textarea {
+    font-family: 'Inter', sans-serif;
+}
+
+form label, form button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+}
+
+.form-control, .form-label, .form-text, .btn {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alert {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-tab, .nav-link {
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+  }

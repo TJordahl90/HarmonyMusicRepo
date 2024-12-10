@@ -1,0 +1,10 @@
+.messaging-form .form-control {
+    border: 1px solid #BF5700;
+    border-width: 1px;
+    padding: 12px;
+}
+
+.messaging-form .form-label {
+    color: #BF5700;
+    font-weight: bold;
+}

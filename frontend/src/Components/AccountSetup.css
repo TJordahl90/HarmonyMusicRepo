@@ -1,0 +1,65 @@
+.account-setup 
+{
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.account-setup h2 
+{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #BF5700;
+}
+
+.account-setup form 
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.account-setup label 
+{
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #BF5700;
+}
+
+.account-setup input 
+{
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #BF5700;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.account-setup input:focus 
+{
+  border-color: #000000;
+  border-width: 1px;
+  outline: none;
+}
+
+.account-setup button 
+{
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.account-setup button:hover 
+{
+  background-color: #0056b3;
+}

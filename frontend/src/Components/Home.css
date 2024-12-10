@@ -1,0 +1,76 @@
+.HomeContainer {
+  margin: 0;
+  padding: 0;
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.Background {
+  background: url('/backgroundimage.jpg') no-repeat center center;
+  background-size: cover; 
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 3px solid #BF5700;
+}
+
+
+
+.Background h1 {
+  font-size: 5vw;
+  color: #BF5700;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 1);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+}
+
+.About, .Services, .Appointments, .Register {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  text-align: left;
+}
+
+.About h2, .Services h2, .Appointments h2, .Register h2 {
+  color: #BF5700;
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+}
+
+.About p, .Services p, .Appointments p, .Register p {
+  font-size: 1.4rem;
+  color: black;
+  line-height: 1.6;
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

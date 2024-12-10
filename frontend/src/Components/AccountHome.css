@@ -1,0 +1,63 @@
+.account-home {
+  	background-color: whitesmoke;
+}
+
+.welcome-message {
+  	text-align: center;
+}
+
+.welcome-message h1 {
+	color: black;
+}
+
+.nav-tabs {
+  	border-bottom: 2px solid #007bff;
+}
+
+.nav-tabs .nav-link {
+  	color: #007bff;
+  	font-size: 1.2rem;
+  	font-weight: bold;
+  	margin-right: 10px;
+}
+
+.nav-tabs .nav-link.active {
+  	background-color: #007bff;
+  	color: #fff;
+  	border-radius: 5px 5px 0 0;
+}
+
+.course-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.course-card .btn {
+  	margin-top: 10px;
+}
+
+.account-home-tab {
+  	text-align: center;
+  	margin-top: 20px;
+}
+
+.account-home-tab h3 {
+  	font-size: 1.8rem;
+  	color: #007bff;
+  	margin-bottom: 10px;
+}
+
+.welcome-message p,
+.account-home-tab p {
+  	color: #6c757d;
+  	font-size: 1.2rem;
+}
+
+.course-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
