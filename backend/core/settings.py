@@ -149,8 +149,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173'
-    #'http://138.197.87.6'
+    'http://localhost:5173',
+    'https://harmony-music-repo.vercel.app/',
 ]
 
 REST_FRAMEWORK = {
