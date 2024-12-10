@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER: 'postgres',
-        'PASSWORD': 'UZoiabUEDlxLIJwHKvWCaTdmhyCDUrui',
-        'HOST': 'postgres.railway.internal',
+        'NAME': 'dfuf5c4b88p4qv',
+        'USER': 'ub5sche5s1ev28',
+        'PASSWORD': 'p9034e2da12cf9cc460627b1e6b8666633494e10ab010d5296fc7457d51390a8f',
+        'HOST': 'c67okggoj39697.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
