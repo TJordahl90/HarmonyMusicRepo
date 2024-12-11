@@ -1,0 +1,34 @@
+.nav-tabs .nav-link {
+  	color: orange;
+  	font-size: 1.2rem;
+  	font-weight: bold;
+  	margin-right: 10px;
+}
+
+.nav-tabs .nav-link:hover, .nav-link.active {
+    color: #BF5700 !important;
+}
+
+.account-home-tab {
+  	text-align: center;
+  	margin-top: 20px;
+}
+
+.account-home-tab h3 {
+  	font-size: 1.8rem;
+  	color: #BF5700;
+  	margin-bottom: 10px;
+}
+
+.account-home-tab p {
+  	color: #6c757d;
+  	font-size: 1.2rem;
+}
+
+.course-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+

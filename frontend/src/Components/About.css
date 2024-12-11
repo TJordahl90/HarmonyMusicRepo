@@ -1,0 +1,36 @@
+.AboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.AboutContainer img
+{
+  margin: 0 auto;
+  height: auto;
+  width: 80%;
+  border-radius: 50%;
+  border: 4px solid #BF5700;
+}
+
+.AboutRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.AboutCol {
+  max-width: 800px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.AboutCard {
+  width: 100vw;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
