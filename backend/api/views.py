@@ -35,10 +35,6 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib.auth.tokens import PasswordResetTokenGenerator, default_token_generator
 
-@ensure_csrf_cookie
-def csrf_token_view(request):
-    return JsonResponse({'message': 'CSRF cookie set.'})
-
 def CheckAuthenticationView(request):
     """Checks if the requesting user is logged in"""
     if request.user.is_authenticated: # if user has activate session, is true
@@ -98,7 +94,7 @@ class LoginAccountView(APIView):
             }
             return Response(response_data, status=status.HTTP_200_OK)
         return Response(login_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+@csrf_exempt
 class LogoutAccountView(APIView):
     """Logout user's account"""
     def post(self, request):
