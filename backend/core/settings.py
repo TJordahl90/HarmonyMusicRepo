@@ -14,7 +14,10 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = ''
@@ -87,8 +90,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dfuf5c4b88p4qv',
+        'USER': 'ub5sche5s1ev28',
+        'PASSWORD': 'p9034e2da12cf9cc460627b1e6b8666633494e10ab010d5296fc7457d51390a8f',
+        'HOST': 'c67okggoj39697.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -139,7 +146,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 django_heroku.settings(locals())
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -148,7 +158,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+<<<<<<< HEAD
     'https://harmony-music-repo.vercel.app',
+=======
+    'https://harmony-music-repo.vercel.app/',
+>>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 ]
 
 REST_FRAMEWORK = {
