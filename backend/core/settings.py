@@ -154,7 +154,7 @@ django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
+#CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     #'http://localhost:5173',
     'https://harmonymusicfrontend.vercel.app',
@@ -178,6 +178,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://harmonymusicfrontend.vercel.app',
 ]
 
+CORS_ALLOW_CREDENTIALS = True  # Must be False when Allow All Origins is True
+
 CSRF_COOKIE_SAMESITE = 'Lax'         # Secure but allows navigation-related cross-origin
 SESSION_COOKIE_SAMESITE = 'Strict'   # Strict for session cookies (not shared across sites)
 CSRF_COOKIE_HTTPONLY = True          # Prevent JavaScript access to CSRF cookie
@@ -187,6 +189,7 @@ CSRF_COOKIE_SECURE = True            # Ensure cookies are only sent over HTTPS
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_DOMAIN = '.vercel.app'
 CSRF_COOKIE_DOMAIN = '.vercel.app'
+
 # stripe payment
 STRIPE_SECRET_KEY = 'sk_test_51QMjFPLfqPv5cJuG9qy2A0duQEZ47AcAEbISsxPjBLE1I1A2ofJbHybNN8sXArnrYhWk6UiUzG00n8jDnrVYtUAv007dkFoDmd'
 STRIPE_WEBHOOK_SECRET = 'whsec_mlOUbavzm5gr0YcSsV4x9Lh728OuWWy6'
