@@ -11,6 +11,7 @@ const PasswordForgot = () => {
 
         try {
             const csrfToken = Cookies.get("csrftoken");
+            console.log("token: ", csrfToken);
             const response = await axios.post(
                 'https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/request_password_reset/', 
                 { email },
