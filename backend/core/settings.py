@@ -56,9 +56,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -155,7 +155,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
+    #'http://localhost:5173',
     'https://harmonymusicfrontend.vercel.app',
 ]
 
@@ -173,19 +173,19 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',
+    #'http://localhost:5173',
     'https://harmonymusicfrontend.vercel.app',
 ]
 
-CSRF_COOKIE_SAMESITE = 'Strict'
+CSRF_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_SAMESITE = 'Strict'
 CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_HTTPONLY = False
 CSRF_USE_SESSIONS = False
 #CSRF_COOKIE_DOMAIN = '.vercel.app'
 # After deployment use these settings
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # stripe payment
 STRIPE_SECRET_KEY = 'sk_test_51QMjFPLfqPv5cJuG9qy2A0duQEZ47AcAEbISsxPjBLE1I1A2ofJbHybNN8sXArnrYhWk6UiUzG00n8jDnrVYtUAv007dkFoDmd'
