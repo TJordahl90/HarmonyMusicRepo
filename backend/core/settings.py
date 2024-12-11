@@ -176,10 +176,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://harmonymusicfrontend.vercel.app',
 ]
 
-CSRF_COOKIE_SAMESITE = 'Strict'
-SESSION_COOKIE_SAMESITE = 'Strict'
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_HTTPONLY = False
-SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = False
 CSRF_USE_SESSIONS = False
 
 # After deployment use these settings
