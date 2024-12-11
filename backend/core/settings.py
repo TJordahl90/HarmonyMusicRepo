@@ -181,7 +181,7 @@ SESSION_COOKIE_SAMESITE = 'Strict'
 CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_HTTPONLY = True
 CSRF_USE_SESSIONS = False
-
+CSRF_COOKIE_DOMAIN = '.vercel.app'
 # After deployment use these settings
  #CSRF_COOKIE_SECURE = True
  #SESSION_COOKIE_SECURE = True
