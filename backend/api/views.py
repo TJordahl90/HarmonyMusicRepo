@@ -26,7 +26,7 @@ from django.conf import settings
 import stripe
 from django.core.mail import send_mail, send_mass_mail, EmailMessage
 from django.conf import settings
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 from django.utils.decorators import method_decorator
 from rest_framework.parsers import MultiPartParser
 from smtplib import SMTPException
@@ -34,6 +34,10 @@ from rest_framework.throttling import UserRateThrottle, AnonRateThrottle
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib.auth.tokens import PasswordResetTokenGenerator, default_token_generator
+
+@ensure_csrf_cookie
+def csrf_token_view(request):
+    return JsonResponse({'message': 'CSRF cookie set.'})
 
 def CheckAuthenticationView(request):
     """Checks if the requesting user is logged in"""
