@@ -178,7 +178,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://harmonymusicfrontend.vercel.app',
 ]
 
-CORS_ALLOW_CREDENTIALS = True  # Must be False when Allow All Origins is True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_COOKIE_SAMESITE = 'Lax'         # Secure but allows navigation-related cross-origin
 SESSION_COOKIE_SAMESITE = 'Strict'   # Strict for session cookies (not shared across sites)
