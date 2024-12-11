@@ -177,16 +177,14 @@ CSRF_TRUSTED_ORIGINS = [
     'https://harmonymusicfrontend.vercel.app',
 ]
 
-CSRF_COOKIE_SAMESITE = 'Lax'
-SESSION_COOKIE_SAMESITE = 'Strict'
-CSRF_COOKIE_HTTPONLY = False
-SESSION_COOKIE_HTTPONLY = False
-CSRF_USE_SESSIONS = False
-#CSRF_COOKIE_DOMAIN = '.vercel.app'
-# After deployment use these settings
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-
+CSRF_COOKIE_SAMESITE = 'Lax'         # Secure but allows navigation-related cross-origin
+SESSION_COOKIE_SAMESITE = 'Strict'   # Strict for session cookies (not shared across sites)
+CSRF_COOKIE_HTTPONLY = True          # Prevent JavaScript access to CSRF cookie
+SESSION_COOKIE_HTTPONLY = True       # Prevent JavaScript access to session cookie
+CSRF_USE_SESSIONS = False            # Use CSRF cookies instead of sessions
+CSRF_COOKIE_SECURE = True            # Ensure cookies are only sent over HTTPS
+SESSION_COOKIE_SECURE = True  
+CSRF_COOKIE_DOMAIN = '.vercel.app'
 # stripe payment
 STRIPE_SECRET_KEY = 'sk_test_51QMjFPLfqPv5cJuG9qy2A0duQEZ47AcAEbISsxPjBLE1I1A2ofJbHybNN8sXArnrYhWk6UiUzG00n8jDnrVYtUAv007dkFoDmd'
 STRIPE_WEBHOOK_SECRET = 'whsec_mlOUbavzm5gr0YcSsV4x9Lh728OuWWy6'
