@@ -29,5 +29,5 @@ urlpatterns = [
     path('username_reset/<int:user_id>/<str:token>/', views.UsernameResetView.as_view(), name='username_reset'),
     path('create_checkout_session/', views.CreateCheckoutSessionView.as_view(), name='create_checkout'),
     path('checkout_webhook/', views.CheckoutWebHookView.as_view(), name='checkout_webhook'),
-    path('api/get-csrf-token/', csrf_token_view),
+    path('api/get-csrf-token/', views.csrf_token_view.as_view(), name='csrfTokenFix'),
 ]
