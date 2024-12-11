@@ -2,7 +2,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Tabs, Tab, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Cookie from cookies
+import Cookies from "js-cookie";
 import './AccountHome.css';
 
 function AccountHome() 
