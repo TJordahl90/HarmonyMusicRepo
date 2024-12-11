@@ -164,6 +164,7 @@ class AccountCourseView(APIView):
     """Retrieve or delete a course from user's account"""
     def get(self, request, course_id):
         try:
+            print("hit")
             account = Account.objects.get(user=request.user) # gets requesting user's account
             course = account.courses.get(id=course_id) # gets specified course from account
             course_serializer = CourseSerializer(course) # serialize the course
