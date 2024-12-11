@@ -18,7 +18,7 @@ function AccountLogin()
             try {
                 const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/csrf/', { headers: { "X-CSRFToken": csrfToken }, withCredentials: true });
                 setCsrfToken(response.data.csrfToken);
-                //console.log("CSRF token created:", response.data);
+                console.log("CSRF token created:", response.data);
             } 
             catch(error) {
                 console.error("Error fetching CSRF token:", error);
