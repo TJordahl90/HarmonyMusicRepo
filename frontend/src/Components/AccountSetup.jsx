@@ -32,7 +32,7 @@ function AccountSetup()
 
     try{
       // This will now call the VerificationView in the backend to create the verification code
-      const response = await axios.post("http://138.197.87.6:80/verification/", registrationData)
+      const response = await axios.post("https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/verification/", registrationData)
       console.log(response.data)
       setMessage("Verification code sent to your email!");
       setError('');
@@ -50,13 +50,13 @@ function AccountSetup()
           setError("Username is already in use. Please choose another.");
         } 
         else if (errors.email) {
-          setError("This email is already registered to an account.");
+          setError("This email has already been registered.");
         } 
         else if (errors.password) {
           setError("Invalid password. Ensure it meets the criteria.");
         } 
         else {
-          setError("An error occurred. Please try again.");
+          setError("An error has occurred. Please try again.");
         }
       } 
       else {
@@ -73,7 +73,7 @@ function AccountSetup()
 
   return(
     <Container
-      className="account-setup my-4"
+      className="account-setup py-5"
       style={{ maxWidth: '700px', padding: '30px' }}
       fluid
     >

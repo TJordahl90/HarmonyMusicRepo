@@ -72,7 +72,7 @@ function CreateCourse() {
             const csrfToken = Cookies.get("csrftoken");
 
             const lessonResponse = await axios.post(
-                'http://138.197.87.6:80/lessons/', 
+                'https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/lessons/', 
                 lessonData,
                 {
                     headers: { "X-CSRFToken": csrfToken },
@@ -88,7 +88,7 @@ function CreateCourse() {
             });
 
             const courseResponse = await axios.post(
-                'http://138.197.87.6:80/courses/',  
+                'https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/courses/',  
                 courseData, 
                 {
                     headers: { "X-CSRFToken": csrfToken },
@@ -126,19 +126,19 @@ function CreateCourse() {
             )}
             <Row className="mb-4">
                 <Col>
-                    <h1>Create New Course</h1>
+                    <h1 style={{fontWeight: 'bold'}}>Create New Course</h1>
                 </Col>
             </Row>
             <Form onSubmit={handleSubmit}>
-                <Card className="mb-4" style={{ width: '100%' }}>
+                <Card className="mb-4" style={{ width: '100%', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
                     <Card.Body>
                         <Row className="mb-3">
                             <Col>
-                                <h4>Course</h4>
+                                <h4 style={{fontWeight: 'bold'}}>Course</h4>
                             </Col>
                         </Row>
                         <Form.Group controlId="courseTitle" className="mb-4">
-                            <Form.Label>Course Title</Form.Label>
+                            <Form.Label style={{color: 'orange'}}>Course Title</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter course title"
@@ -148,7 +148,7 @@ function CreateCourse() {
                             />
                         </Form.Group>
                         <Form.Group controlId="courseOverview" className="mb-3">
-                            <Form.Label>Course Overview</Form.Label>
+                            <Form.Label style={{color: 'orange'}}>Course Overview</Form.Label>
                             <Form.Control
                                 as="textarea"
                                 rows={2}
@@ -159,7 +159,7 @@ function CreateCourse() {
                             />
                         </Form.Group>
                         <Form.Group controlId="courseDescription" className="mb-3">
-                            <Form.Label>Course Description</Form.Label>
+                            <Form.Label style={{color: 'orange'}}>Course Description</Form.Label>
                             <Form.Control
                                 as="textarea"
                                 rows={3}
@@ -170,7 +170,7 @@ function CreateCourse() {
                             />
                         </Form.Group>
                         <Form.Group controlId="coursePrice" className="mb-3">
-                            <Form.Label>Course Price</Form.Label>
+                            <Form.Label style={{color: 'orange'}}>Course Price</Form.Label>
                             <Form.Control
                                 type="number"
                                 placeholder="Enter course price"
@@ -180,7 +180,7 @@ function CreateCourse() {
                             />
                         </Form.Group>
                         <Form.Group controlId="courseCoverImage" className="mb-3">
-                            <Form.Label>Upload Course Cover Image</Form.Label>
+                            <Form.Label style={{color: 'orange'}}>Upload Course Cover Image</Form.Label>
                             <Form.Control
                                 type="file"
                                 accept="image/*"
@@ -190,11 +190,11 @@ function CreateCourse() {
                     </Card.Body>
                 </Card>
                 {lessons.map((lesson, index) => (
-                    <Card className="mb-4" key={index} style={{ width: '100%' }}>
+                    <Card className="mb-4" key={index} style={{ width: '100%', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid' }}>
                         <Card.Body>
                             <Row className="mb-3">
                                 <Col>
-                                    <h4>Lesson {index + 1}</h4>
+                                    <h4 style={{fontWeight: 'bold'}}>Lesson {index + 1}</h4>
                                 </Col>
                                 <Col className="text-end">
                                     <Button
@@ -208,7 +208,7 @@ function CreateCourse() {
                                 </Col>
                             </Row>
                             <Form.Group controlId={`lessonTitle-${index}`} className="mb-3">
-                                <Form.Label>Lesson Title</Form.Label>
+                                <Form.Label style={{color: 'orange'}}>Lesson Title</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter lesson title"
@@ -218,7 +218,7 @@ function CreateCourse() {
                                 />
                             </Form.Group>
                             <Form.Group controlId={`lessonOverview-${index}`} className="mb-3">
-                                <Form.Label>Lesson Overview</Form.Label>
+                                <Form.Label style={{color: 'orange'}}>Lesson Overview</Form.Label>
                                 <Form.Control
                                     as="textarea"
                                     rows={2}
@@ -229,7 +229,7 @@ function CreateCourse() {
                                 />
                             </Form.Group>
                             <Form.Group controlId={`lessonDescription-${index}`} className="mb-3">
-                                <Form.Label>Lesson Description</Form.Label>
+                                <Form.Label style={{color: 'orange'}}>Lesson Description</Form.Label>
                                 <Form.Control
                                     as="textarea"
                                     rows={3}
@@ -240,7 +240,7 @@ function CreateCourse() {
                                 />
                             </Form.Group>
                             <Form.Group controlId={`lessonVideo-${index}`} className="mb-3">
-                                <Form.Label>Upload Lesson Video</Form.Label>
+                                <Form.Label style={{color: 'orange'}}>Upload Lesson Video</Form.Label>
                                 <Form.Control
                                     type="file"
                                     accept="video/*"
@@ -249,7 +249,7 @@ function CreateCourse() {
                                 />
                             </Form.Group>
                             <Form.Group controlId={`lessonImage-${index}`} className="mb-3">
-                                <Form.Label>Upload Lesson Image/File</Form.Label>
+                                <Form.Label style={{color: 'orange'}}>Upload Lesson Image/File</Form.Label>
                                 <Form.Control
                                     type="file"
                                     accept="image/*"

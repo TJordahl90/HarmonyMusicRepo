@@ -31,7 +31,7 @@ function Messaging() {
             const csrfToken = Cookies.get("csrftoken");
 			const formData = { name, email, question };
             await axios.post(
-				"http://138.197.87.6:80/email_contact/", 
+				"https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/email_contact/", 
 				formData,
 				{
                     headers: { "X-CSRFToken": csrfToken },
@@ -56,7 +56,7 @@ function Messaging() {
     };
 
     return (
-        <Container className="messaging-form my-4" style={{ maxWidth: '700px' }} fluid>
+        <Container className="messaging-form py-5" style={{ maxWidth: '700px' }} fluid>
             <Card style={{ padding: '40px', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
             <Row className="justify-content-center">
                 <Col>
@@ -100,7 +100,7 @@ function Messaging() {
                                 value={question}
                                 onChange={handleChange}
                                 rows={4}
-                                placeholder="Enter your question here"
+                                placeholder="Enter your question"
                                 required
                             />
                         </Form.Group>

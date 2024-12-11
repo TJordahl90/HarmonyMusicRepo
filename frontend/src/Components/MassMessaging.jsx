@@ -26,7 +26,7 @@ function MassMessaging() {
             const csrfToken = Cookies.get("csrftoken");
             const formData = { subject, body };
             const response = await axios.post(
-                "http://138.197.87.6:80/mass_email_contact/",
+                "https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/mass_email_contact/",
                 formData,
                 {
                     headers: { "X-CSRFToken": csrfToken },
@@ -41,7 +41,7 @@ function MassMessaging() {
         } 
         catch (err) {
             console.error(err);
-            setError("Failed to send email, please try again.");
+            setError("Email failed, please try again.");
             setMessage('');
         }
 

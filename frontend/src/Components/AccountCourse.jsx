@@ -20,7 +20,7 @@ const AccountCourse = () => {
 
         const getCourse = async () => {
             try {
-                const response = await axios.get(`http://138.197.87.6:80/account_course/${courseId}/`, { withCredentials: true });
+                const response = await axios.get(`https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/account_course/${courseId}/`, { withCredentials: true });
                 console.log(response.data);
                 setCourseData(response.data);
             } 
@@ -39,7 +39,7 @@ const AccountCourse = () => {
             const csrfToken = Cookies.get("csrftoken");
 
             const deleteResponse = await axios.delete(
-                `http://138.197.87.6:80/account_course/${courseId}/`, 
+                `https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/account_course/${courseId}/`, 
                 {
                     headers: { "X-CSRFToken": csrfToken },
                     withCredentials: true,
@@ -47,7 +47,7 @@ const AccountCourse = () => {
             );
 
             console.log(deleteResponse.data);
-            navigate("/account-home");
+            navigate("/account");
         } 
         catch (error) {
             console.error("Error deleting course:", error);
@@ -89,26 +89,19 @@ const AccountCourse = () => {
 
                         {courseData.lessons_preview && courseData.lessons_preview.length > 0 ? (
                             courseData.lessons_preview.map((lesson, index) => (
-                                <Card.Body>
-                                    <Card.Img 
-                                        variant="top" 
-                                        src={`http://138.197.87.6:80/${courseData.course.cover_image}`}// need to link to lesson thumbnail instead
-                                        alt={`${courseData.course.title} cover image`} 
-                                        style={{  maxHeight: '50px', maxWidth: '50px', objectFit: 'cover' }} 
-                                    /> 
+                                <Card.Body> 
                                     <Card.Title as="h5" style={{ color: 'orange' }}>{lesson.title}</Card.Title>
                                     <Accordion>
                                         <Accordion.Item eventKey="0">
-                                            <Accordion.Header>View Lesson Overview</Accordion.Header>
+                                            <Accordion.Header>Lesson Details</Accordion.Header>
                                             <Accordion.Body>{lesson.overview}</Accordion.Body>
-                                            <Accordion.Body># of Videos</Accordion.Body>
-                                            <Accordion.Body># of Readings</Accordion.Body>
-                                            <Accordion.Body># of Documents</Accordion.Body>
+                                            <Accordion.Body>
+                                                <Link to={`/account/course/${courseId}/lesson/${lesson.id}`}>
+                                                    <Button variant="primary" className="mt-3">Go to Lesson</Button>
+                                                </Link>
+                                            </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>
-                                    <Link to={`/account/course/${courseId}/lesson/${lesson.id}`}>
-                                        <Button variant="primary" className="mt-3">Go to Lesson</Button>
-                                    </Link>
                                 </Card.Body>
                                 ))
                             ) : (

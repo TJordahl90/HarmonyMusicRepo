@@ -4,13 +4,12 @@ body {
     background-size: 12px 12px; 
 }
 
-/* Fonts used in the website */
 h1, h2, h3, h4, h5 {
     color: #BF5700;
     font-family: 'Montserrat', sans-serif; 
 }
 
-a {
+/* a {
     font-family: 'Montserrat', sans-serif; 
 }
 
@@ -45,23 +44,29 @@ form label, form button {
 .nav-tab, .nav-link {
     font-family: 'Montserrat', sans-serif;
 }
+
+.accordion-body {
+    font-family: 'Inter', sans-serif;
+} */
+
 html, body {
     height: 100%;
     margin: 0;
-  }
+    font-family: 'Montserrat', sans-serif; 
+}
   
-  #root {
+#root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
+}
   
-  .container {
+.container {
     flex: 1;
-  }
+}
   
-  footer {
+footer {
     background-color: #f8f9fa;
     padding: 1rem;
     text-align: center;
-  }
+}

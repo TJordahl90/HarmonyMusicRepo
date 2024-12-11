@@ -17,10 +17,10 @@ export default function Home() {
                         <div className="About" style={{ borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
                             <h2 >Learn to play music with House of Harmony Music</h2>
                             <p>
-                                House of Harmony Music offers personal instruction from the multi-instrumentalist, Brandon Shadman. 
+                                House of Harmony Music offers personalized instruction from the multi-instrumentalist, Brandon Shadman. 
                                 With over a decade of musical experience, including skills in singing, piano, trumpet, and guitar. 
-                                He currently teaches pop, rock, and music fundamentals, helping students unlock their musical 
-                                potential. In 2023, he founded House of Harmony Music to offer personalized music instruction 
+                                He currently teaches pop, rock, and music fundamentals, helping students unlock their ideal 
+                                sound. In 2023, House of Harmony Music was founded to offer personalized music instruction 
                                 while balancing his studies.
                                 Learn more about Brandon Shadman here: <a href="http://localhost:5173/about">[About Page]</a>
                             </p>
@@ -36,7 +36,7 @@ export default function Home() {
                             <br></br>
                             <h2>Schedule an Appointment</h2>
                             <p>
-                                You can make an appointment for a music lesson with Brandon Shadman. Simply reach out via the 
+                                You can make your appointment for a music lesson with Brandon Shadman. Simply reach out via the 
                                 provided contact information here: <a href="http://localhost:5173/contact">[Contact Page]</a>. Feel free to ask any 
                                 questions about lesson structure or the instructor's approach before booking to ensure a great 
                                 fit for your musical goals.

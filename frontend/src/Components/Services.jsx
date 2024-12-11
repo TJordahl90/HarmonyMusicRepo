@@ -13,8 +13,7 @@ const Services = () => {
     useEffect(() => {
         const getCourses = async () => {
             try {
-                console.log("got courses");
-                const response = await axios.get('http://138.197.87.6:80/course_list/');
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/course_list/');
                 setCourses(response.data);
             } 
             catch (error) {
@@ -30,7 +29,7 @@ const Services = () => {
         if (courseId) {
             const getSelectedCourse = async () => {
                 try {
-                    const response = await axios.get(`http://138.197.87.6:80/course/${courseId}/`);
+                    const response = await axios.get(`https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/course/${courseId}/`);
                     setSelectedCourse(response.data);
                 } 
                 catch (error) {
@@ -47,18 +46,21 @@ const Services = () => {
     }
 
     return (
-        <Container className="py-7" style={{ marginTop: '40px' }}>
-            <Row className="d-flex justify-content-center">
-                <Col className="text-center">
-                    <Card style={{ borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
-                        <h1 style={{ color: 'orange' }}>Services</h1>
-                        <p className="text-start" style={{ width: '100%', maxWidth: '870px', margin: '0 auto' }}>
-                            Embark on a musical adventure with our comprehensive online courses in guitar, piano, 
-                            and vocal training. Whether you aspire to strum the perfect chord, play enchanting melodies, 
-                            or find your unique voice, our courses are crafted to guide you every step of the way. Join 
-                            us and transform your musical dreams into reality with expert instruction and interactive 
-                            lessons designed for all skill levels.
-                        </p>
+        <Container className="py-5">
+            <Row className="mb-4">
+                <Col>
+                    <Card className="p-4 shadow-sm" style={{ borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
+                        <Card.Body>
+                            <Card.Title as="h1" className="d-flex justify-content-center" style={{ color: 'orange' }}>Courses</Card.Title>
+                            <Card.Text className="text-start" style={{ width: '100%', maxWidth: '870px', margin: '0 auto' }}>
+                                Embark on a musical adventure with our comprehensive online courses in guitar, piano, 
+                                and vocal training. Whether you aspire to strum the perfect chord, play enchanting melodies, 
+                                or find your unique voice, our courses are crafted to guide you every step of the way. Join 
+                                us and transform your musical dreams into reality with expert instruction and interactive 
+                                lessons designed for all skill levels.
+                            </Card.Text>
+                        </Card.Body>
+
                         <Row className="d-flex justify-content-center">
                             {courses.length > 0 ? (
                                 courses.map((course) => (
@@ -66,16 +68,18 @@ const Services = () => {
                                         <Card className="mb-4" style={{ borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid', marginLeft: '15px', marginRight: '15px'  }}>
                                             <Card.Img
                                                 variant="top"
-                                                src={`http://138.197.87.6:80/${course.cover_image}`}
+                                                src={course.cover_image ? `https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/${course.cover_image}`: "https://via.placeholder.com/150"}
                                                 height="auto"
                                                 style={{ objectFit: 'cover' }}
                                             />
                                             <Card.Body>
-                                                <Card.Title style={{ color: 'orange' }}>{course.title}</Card.Title>
+                                                <Card.Title className="d-flex justify-content-center" style={{ color: 'orange' }}>{course.title}</Card.Title>
                                                 <Card.Text>{course.overview}</Card.Text>
+                                                <div className="d-flex justify-content-center">
                                                 <Link to={`/course-list/course/${course.id}`}>
                                                     <Button variant="primary">View Course</Button>
                                                 </Link>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>

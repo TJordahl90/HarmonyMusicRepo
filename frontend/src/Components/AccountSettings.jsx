@@ -42,10 +42,10 @@ function AccountSettings() {
   };
 
   return (
-    <div className="AccountSettingsContainer">
+    <div className="AccountSettingsContainer" style={{ marginTop: '20px', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid' }}>
       <Row className="AccountRow">
         <Col className="AccountColLeft">
-          <Card className="AccountCard shadow-lg">
+          <Card className="AccountCard shadow-lg" style={{ width: '100%', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
             <Card.Body>
               <div className="image-container">
                 <img src="account.webp" alt="User Profile" className="image" />
@@ -55,7 +55,7 @@ function AccountSettings() {
           </Card>
         </Col>
         <Col className="AccountColRight">
-          <Card className="AccountCard shadow-lg">
+          <Card className="AccountCard shadow-lg" style={{ width: '100%', borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
             <Card.Body>
               {error && <Alert variant="danger">{error}</Alert>}
               {!isEditing ? (

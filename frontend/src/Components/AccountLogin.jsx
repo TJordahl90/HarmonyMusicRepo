@@ -16,7 +16,7 @@ function AccountLogin()
     useEffect(() => {
         const getCsrfToken = async () => {
             try {
-                const response = await axios.get('http://138.197.87.6:80/csrf/', { withCredentials: true });
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/csrf/', { withCredentials: true });
                 setCsrfToken(response.data.csrfToken);
                 //console.log("CSRF token created:", response.data);
             } 
@@ -42,7 +42,7 @@ function AccountLogin()
         };
   
         try {
-            const response = await axios.post("http://138.197.87.6:80/login/", loginData, tokenData);
+            const response = await axios.post("https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/login/", loginData, tokenData);
             console.log("Login successful:", response.data);
             setMessage("Successful login!");
             setError('');
@@ -69,7 +69,7 @@ function AccountLogin()
                     setError("Invalid credentials.");
                 } 
                 else {
-                    setError("An error occurred. Please try again.");
+                    setError("An error has occurred. Please try again.");
                 }
             } 
             else {
@@ -86,7 +86,7 @@ function AccountLogin()
 
     return ( 
         <Container
-            className="AccountLogin account-login my-4"
+            className="AccountLogin account-login py-5"
             style={{ maxWidth: '700px', padding: '30px' }}
             fluid
             >

@@ -19,7 +19,7 @@ function AccountLogout()
                     withCredentials: true,
                 };
                 
-                const logoutResponse = await axios.post('http://138.197.87.6:80/logout/', {}, tokenData);
+                const logoutResponse = await axios.post('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/logout/', {}, tokenData);
                 console.log("Logged out:", logoutResponse.data);
                 
                 localStorage.removeItem("userData");

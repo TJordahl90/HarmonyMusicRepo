@@ -4,7 +4,7 @@ import './About.css';
 
 export default function About() {
     return (
-        <Container className="AboutContainer">
+        <Container className="AboutContainer py-5">
             <Row className="AboutRow">
                 <Col className="AboutCol">
                     <Card className="AboutCard" style={{ borderWidth: '3px', borderColor: 'orange', borderStyle: 'solid'}}>
@@ -21,8 +21,8 @@ export default function About() {
                                     <h1>Meet Brandon Shadman</h1>
                                     <p>
                                         Brandon Shadman is a 20-year-old multi-instrumentalist musician with a decade of musical experience.
-                                        Beginning his musical journey at a young age, teaching himself to sing. He has since continued to
-                                        learn a variety of other instruments through self-taught methods.
+                                        Beginning his musical journey at a young age, teaching himself to sing. He began his at a young age,
+                                        teaching himself to sing, and has since mastered a variety of instruments through self-directed learning.
                                     </p>
                                     <p>
                                         During high school, Brandon added the piano to his repertoire and competed at multiple state levels

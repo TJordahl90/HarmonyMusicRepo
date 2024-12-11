@@ -27,13 +27,13 @@ function Verification(){
       
       try{
         // Takes the user input code, calls the VerificationCheckView to compare the input code vs the randomly generated one
-        const response = await axios.post("http://138.197.87.6:80/verification/check/", { email: data.email, code: code });
+        const response = await axios.post("https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/verification/check/", { email: data.email, code: code });
         console.log("Verification code accepted", response.data);
 
         if(response.status == 200){
           // If the code comparison check returns successful, register the account
           try {
-            const registration = await axios.post("http://138.197.87.6:80/register/", data);
+            const registration = await axios.post("https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/register/", data);
             console.log("Registration successful:", registration.data);
             navigate('/login');
           }
@@ -55,10 +55,10 @@ function Verification(){
         console.log("You have exceeded the re-send attempts limit. Please register again.")
       }
       try{
-        const createCode = await axios.post("http://138.197.87.6:80/verification/", data);
+        const createCode = await axios.post("https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/verification/", data);
         setVerificationAttempts(2);
         setResendAttempts(prev => prev - 1);
-        console.log("New verification code created for", data.email, `You have ${resendAttempts} re-send attempts available.`);
+        console.log("New verification code created", data.email, `You have ${resendAttempts} re-send attempts available.`);
       }
       catch(error){
         console.error("Error re-sending email verification.", createCode.response.data);
