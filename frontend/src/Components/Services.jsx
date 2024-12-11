@@ -13,10 +13,7 @@ const Services = () => {
     useEffect(() => {
         const getCourses = async () => {
             try {
-<<<<<<< HEAD
-=======
                 console.log("got courses");
->>>>>>> 1ff3376e7c56520e0466caa314afcc2850e4047e
                 const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/course_list/');
                 setCourses(response.data);
             } 
