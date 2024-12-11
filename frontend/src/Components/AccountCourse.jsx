@@ -18,6 +18,7 @@ const AccountCourse = () => {
         const authStatus = localStorage.getItem("isAuthorized") === "true";
         setIsAuthorized(authStatus);
         const csrfToken = Cookies.get("csrftoken");
+        console.log("token:", csrfToken);
 
         const getCourse = async () => {
             try {
