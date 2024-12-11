@@ -184,7 +184,8 @@ CSRF_COOKIE_HTTPONLY = True          # Prevent JavaScript access to CSRF cookie
 SESSION_COOKIE_HTTPONLY = True       # Prevent JavaScript access to session cookie
 CSRF_USE_SESSIONS = False            # Use CSRF cookies instead of sessions
 CSRF_COOKIE_SECURE = True            # Ensure cookies are only sent over HTTPS
-SESSION_COOKIE_SECURE = True  
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_DOMAIN = '.vercel.app'
 CSRF_COOKIE_DOMAIN = '.vercel.app'
 # stripe payment
 STRIPE_SECRET_KEY = 'sk_test_51QMjFPLfqPv5cJuG9qy2A0duQEZ47AcAEbISsxPjBLE1I1A2ofJbHybNN8sXArnrYhWk6UiUzG00n8jDnrVYtUAv007dkFoDmd'
