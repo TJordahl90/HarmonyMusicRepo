@@ -20,12 +20,15 @@ function AccountHome()
     useEffect(() => {
         const authStatus = localStorage.getItem("isAuthorized") === "true";
         setIsAuthorized(authStatus);
-        const csrfToken = Cookies.get("csrftoken");
+        const csrfToken = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('csrftoken'))
+            ?.split('=')[1];
         console.log(csrfToken);
 
         const getCourses = async () => {
             try {
-                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/courses/', { headers: { "X-CSRFToken": csrfToken }, withCredentials: true });
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/courses/', { withCredentials: true }, headers: { "X-CSRFToken": csrfToken });
                 console.log("Courses:", response.data);
                 setCourses(response.data);
             } 
