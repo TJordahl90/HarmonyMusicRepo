@@ -135,7 +135,7 @@ EMAIL_HOST_PASSWORD = 'slvu hurc zrde fnmq'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 django_heroku.settings(locals())
@@ -147,8 +147,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173'
-    #'http://138.197.87.6'
+    'http://localhost:5173',
+    'https://harmony-music-repo.vercel.app',
 ]
 
 REST_FRAMEWORK = {
@@ -165,7 +165,8 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://harmony-music-repo.vercel.app',
 ]
 
 CSRF_COOKIE_SAMESITE = 'Strict'
