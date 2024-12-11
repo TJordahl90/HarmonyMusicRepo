@@ -94,7 +94,7 @@ class LoginAccountView(APIView):
             }
             return Response(response_data, status=status.HTTP_200_OK)
         return Response(login_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-@csrf_exempt
+
 class LogoutAccountView(APIView):
     """Logout user's account"""
     def post(self, request):
