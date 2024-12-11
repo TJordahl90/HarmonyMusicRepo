@@ -22,7 +22,7 @@ function AccountHome()
 
         const getCourses = async () => {
             try {
-                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/courses/', { withCredentials: true });
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/courses/', { headers: { "X-CSRFToken": csrfToken }, withCredentials: true });
                 console.log("Courses:", response.data);
                 setCourses(response.data);
             } 
