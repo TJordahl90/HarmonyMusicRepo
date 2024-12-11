@@ -26,17 +26,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';  // imports bootstrap styles
 
 function App(){
 
-  useEffect(() => {
-    // Set Axios defaults
-    axios.defaults.withCredentials = true;
-    axios.defaults.baseURL = "https://harmonymusicbackend.vercel.app"; // Update with your backend domain
-
-    // Fetch CSRF token on app load
-    axios.get("/api/get-csrf-token/")
-      .then(() => console.log("CSRF token initialized"))
-      .catch(error => console.error("Error initializing CSRF token:", error));
-  }, []);
-  
   return (
     <>
       <Navbar />
