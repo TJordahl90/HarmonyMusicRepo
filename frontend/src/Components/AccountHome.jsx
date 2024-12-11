@@ -20,7 +20,7 @@ function AccountHome()
     useEffect(() => {
         const authStatus = localStorage.getItem("isAuthorized") === "true";
         setIsAuthorized(authStatus);
-        const csrfToken = Cookie.get("csrftoken");
+        const csrfToken = Cookies.get("csrftoken");
 
         const getCourses = async () => {
             try {
