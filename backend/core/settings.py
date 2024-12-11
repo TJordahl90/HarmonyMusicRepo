@@ -14,10 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-<<<<<<< HEAD
-
-=======
->>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = ''
@@ -146,10 +142,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 django_heroku.settings(locals())
-<<<<<<< HEAD
-
-=======
->>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -158,11 +150,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-<<<<<<< HEAD
     'https://harmony-music-repo.vercel.app',
-=======
-    'https://harmony-music-repo.vercel.app/',
->>>>>>> d1f53036896da25d592da563e26ff2ecc7463d3a
 ]
 
 REST_FRAMEWORK = {
