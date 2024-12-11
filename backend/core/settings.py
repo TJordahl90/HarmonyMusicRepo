@@ -186,6 +186,12 @@ CSRF_USE_SESSIONS = False
  #CSRF_COOKIE_SECURE = True
  #SESSION_COOKIE_SECURE = True
 
+CORS_ORIGIN_WHITELIST = [
+    #'http://localhost:3000/',  # Frontend URL (development)
+    'https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/',  # Production frontend domain
+    'http://localhost:8000/',  # Backend URL (if needed during development)
+]
+
 # stripe payment
 STRIPE_SECRET_KEY = 'sk_test_51QMjFPLfqPv5cJuG9qy2A0duQEZ47AcAEbISsxPjBLE1I1A2ofJbHybNN8sXArnrYhWk6UiUzG00n8jDnrVYtUAv007dkFoDmd'
 STRIPE_WEBHOOK_SECRET = 'whsec_mlOUbavzm5gr0YcSsV4x9Lh728OuWWy6'
