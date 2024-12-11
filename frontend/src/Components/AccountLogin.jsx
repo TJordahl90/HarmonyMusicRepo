@@ -16,7 +16,7 @@ function AccountLogin()
     useEffect(() => {
         const getCsrfToken = async () => {
             try {
-                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/csrf/', { withCredentials: true });
+                const response = await axios.get('https://harmonymusicbackend-c9ce11d363f1.herokuapp.com/csrf/', { headers: { "X-CSRFToken": csrfToken }, withCredentials: true });
                 setCsrfToken(response.data.csrfToken);
                 //console.log("CSRF token created:", response.data);
             } 
