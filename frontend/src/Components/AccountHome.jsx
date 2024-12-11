@@ -2,6 +2,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Tabs, Tab, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Cookie from cookies
 import './AccountHome.css';
 
 function AccountHome() 
@@ -19,6 +20,7 @@ function AccountHome()
     useEffect(() => {
         const authStatus = localStorage.getItem("isAuthorized") === "true";
         setIsAuthorized(authStatus);
+        const csrfToken = Cookie.get("csrftoken");
 
         const getCourses = async () => {
             try {
